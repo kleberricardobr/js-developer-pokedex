@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+.container-details {    
+    position: fixed;
+    left: 40%;
+    top: 5px;
+    margin-left: auto;
+    margin-right: auto;    
+    max-width: 20rem;
+    height: 595px;    
+    border-radius: 30px;   
+    -webkit-box-shadow: -2px 0px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 0px 6px -1px rgba(0,0,0,0.75);
+    box-shadow: -2px 0px 6px -1px rgba(0,0,0,0.75); 
+    display: none;
+} 
+
+#details-title {
+    text-transform: capitalize;
+}
+
+.container-details__data {
+    height: 55%;
+    border-radius: 30px;  
+    background-color: #fff;    
+    padding-top: 5px;
+   
+}
+
+.container-details__head, .container-details__data {    
+    padding-left: 2rem; 
+    padding-right: 2rem;  
+}
+
+.container-details__head {
+    height: 45%;    
+}
+
+.container-details__head__title {
+    margin-top: 20px;    
+}
+
+.container-details__head__title > h1 {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container-details__head__title > span {
+    color: #fff;
+    margin-top: 30px;
+}
+
+.container-details__head__back {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-details__head__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-details__head__powers > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;   
+}
+
+.container-details__head__powers > ul > li{
+    margin-left: 10px;      
+    color: white;
+    border-radius: 10px;
+    padding: 10px;   
+    font-size: 0.8rem;
+    filter: brightness(1.1);
+}
+
+.container-details__head__img {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container-details__head__img  > img{
+    margin-top: 30px;
+    width: 130px;    
+}
+
+.container-details__data__subdetails {
+    margin-top: 60px;
+}
+
+.container-details__data__subdetails_data{
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.table_subdetails {
+    border-spacing: 10px;
+}
+
+.container-details__data__subdetails_data > h4{
+    margin: 5px 0 0 10px;
+    margin-left: 10px;
+}
+
+#detail-return:hover, #bookmark:hover{
+    cursor: pointer;
+}
+
+.subdetails-font {
+    font-weight: 300;
+}
+
+

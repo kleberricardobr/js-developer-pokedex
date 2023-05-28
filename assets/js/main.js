@@ -1,13 +1,17 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const pokemonList = document.getElementById('pokemonList');
+const loadMoreButton = document.getElementById('loadMoreButton');
+const returnMain = document.getElementById('detail-return');
+const bookmark = document.getElementById('bookmark');
 
 const maxRecords = 151
 const limit = 10
 let offset = 0;
+let indexDetail = -1;
 
-function convertPokemonToLi(pokemon) {
+function convertPokemonToLi(pokemon) {    
+    pokemonArr.push(pokemon);    
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}") onclick=pokeApi.showDetails(${pokemonArr.length - 1})>
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -22,6 +26,7 @@ function convertPokemonToLi(pokemon) {
         </li>
     `
 }
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -45,3 +50,13 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+returnMain.addEventListener('click', () => {
+    document.getElementsByClassName('container-details')[0].
+             style.
+             display = 'none';
+             
+    indexDetail = -1;
+} ); 
+
+bookmark.addEventListener('click', changeBookmark);                                         
